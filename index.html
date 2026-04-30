@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angad Kochar — Life Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Parallax layer 1 — stars (slowest) -->
+    <div class="p-layer" id="pStars">
+      <div class="star-field"></div>
+    </div>
+
+    <!-- Parallax layer 2 — moon -->
+    <div class="p-layer" id="pMoon">
+      <div class="moon-orb">
+        <div class="moon-glow"></div>
+      </div>
+    </div>
+
+    <!-- Parallax layer 3 — distant mountains -->
+    <div class="p-layer" id="pMountains">
+      <svg class="mountain-svg" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,300 L0,200 L120,140 L200,170 L300,100 L390,130 L480,80 L560,115 L650,75 L730,110 L820,60 L900,100 L990,70 L1080,105 L1160,80 L1250,120 L1340,90 L1440,115 L1440,300 Z" fill="#0c0c24" opacity="0.9"/>
+        <path d="M0,300 L0,240 L100,210 L200,225 L320,195 L440,215 L560,200 L680,218 L800,205 L920,220 L1040,208 L1160,222 L1280,212 L1440,225 L1440,300 Z" fill="#0a0a1e" opacity="0.95"/>
+      </svg>
+    </div>
+
+    <!-- Parallax layer 4 — city silhouette -->
+    <div class="p-layer" id="pCity">
+      <svg class="city-svg" viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,220 L0,170 L40,170 L40,140 L55,140 L55,120 L70,120 L70,140 L85,140 L85,155 L120,155 L120,130 L135,130 L135,105 L150,105 L150,130 L165,130 L165,155 L200,155 L200,135 L215,135 L215,110 L225,100 L235,110 L235,135 L260,135 L260,165 L300,165 L300,130 L315,130 L315,100 L330,90 L345,100 L345,130 L360,130 L360,160 L400,160 L400,138 L415,138 L415,115 L425,108 L435,115 L435,138 L460,138 L460,170 L500,170 L500,145 L515,145 L515,118 L530,105 L545,118 L545,145 L560,145 L560,165 L600,165 L600,140 L615,140 L615,112 L628,102 L641,112 L641,140 L660,140 L660,168 L700,168 L700,142 L716,142 L716,116 L729,105 L742,116 L742,142 L760,142 L760,165 L800,165 L800,138 L812,138 L812,110 L824,100 L836,110 L836,138 L860,138 L860,170 L900,170 L900,145 L914,145 L914,120 L926,110 L938,120 L938,145 L955,145 L955,162 L1000,162 L1000,135 L1012,135 L1012,108 L1025,98 L1038,108 L1038,135 L1055,135 L1055,160 L1100,160 L1100,140 L1114,140 L1114,115 L1125,108 L1136,115 L1136,140 L1155,140 L1155,165 L1200,165 L1200,142 L1213,142 L1213,118 L1224,108 L1235,118 L1235,142 L1255,142 L1255,168 L1300,168 L1300,150 L1360,150 L1360,165 L1440,165 L1440,220 Z" fill="#080818"/>
+        <!-- Windows (tiny glowing dots) -->
+        <rect x="57" y="126" width="4" height="4" fill="#ffd166" opacity="0.6"/>
+        <rect x="66" y="132" width="4" height="4" fill="#ffd166" opacity="0.4"/>
+        <rect x="137" y="115" width="4" height="4" fill="#a8d8ea" opacity="0.5"/>
+        <rect x="148" y="122" width="4" height="4" fill="#ffd166" opacity="0.6"/>
+        <rect x="317" y="108" width="4" height="4" fill="#ffd166" opacity="0.5"/>
+        <rect x="332" y="100" width="4" height="4" fill="#a8d8ea" opacity="0.4"/>
+        <rect x="517" y="128" width="4" height="4" fill="#ffd166" opacity="0.6"/>
+        <rect x="532" y="115" width="4" height="4" fill="#a8d8ea" opacity="0.5"/>
+        <rect x="718" y="126" width="4" height="4" fill="#ffd166" opacity="0.5"/>
+        <rect x="914" y="130" width="4" height="4" fill="#ffd166" opacity="0.6"/>
+        <rect x="1015" y="118" width="4" height="4" fill="#a8d8ea" opacity="0.5"/>
+        <rect x="1116" y="125" width="4" height="4" fill="#ffd166" opacity="0.6"/>
+        <rect x="1215" y="128" width="4" height="4" fill="#a8d8ea" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <!-- Parallax layer 5 — foreground road perspective -->
+    <div class="p-layer" id="pRoad">
+      <div class="hero-road-persp">
+        <div class="persp-road">
+          <div class="persp-line persp-l"></div>
+          <div class="persp-center">
+            <div class="persp-dash"></div>
+            <div class="persp-dash"></div>
+            <div class="persp-dash"></div>
+          </div>
+          <div class="persp-line persp-r"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Life Roadmap</p>
+      <h1 class="hero-name">Angad<br><em>Kochar</em></h1>
+      <p class="hero-inspired">Inspired by <em>Born a Crime</em></p>
+      <p class="hero-by">Trevor Noah</p>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">Six waystations. One journey. One destination.</p>
+      <div class="scroll-cue">
+        <span class="scroll-cue-text">Begin the drive</span>
+        <div class="scroll-cue-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ═══ END HERO ════════════════════════════════════════════ -->
+
+  <!-- ═══ ROAD ════════════════════════════════════════════════ -->
+  <div class="road-wrapper" id="roadWrapper">
+
+    <!-- Road strip (absolute, full height) -->
+    <div class="road-strip">
+      <div class="road-shoulder left-sh"></div>
+      <div class="road-lane">
+        <div class="dash-wrap">
+          <div class="dash-anim" id="dashAnim"></div>
+        </div>
+      </div>
+      <div class="road-shoulder right-sh"></div>
+    </div>
+
+    <!-- Sticky car -->
+    <div class="car-sticky" id="carSticky">
+      <div class="headlight-beam" id="headlightBeam"></div>
+      <div class="car-body" id="car">
+        <svg viewBox="0 0 110 52" xmlns="http://www.w3.org/2000/svg" id="carSvg">
+          <!-- Shadow -->
+          <ellipse cx="55" cy="50" rx="42" ry="3.5" fill="rgba(0,0,0,0.35)"/>
+          <!-- Body lower -->
+          <rect x="6" y="24" width="96" height="20" rx="6" fill="#c8102e"/>
+          <!-- Body highlight -->
+          <rect x="6" y="24" width="96" height="6" rx="6" fill="#e63946" opacity="0.7"/>
+          <!-- Cabin -->
+          <path d="M22,24 L29,9 L82,9 L90,24 Z" fill="#e63946"/>
+          <!-- Cabin highlight -->
+          <path d="M30,9 L82,9 L86,18 L26,18 Z" fill="#ef4a58" opacity="0.4"/>
+          <!-- Rear windshield -->
+          <path d="M29,10 L22,23 L36,23 L36,10 Z" fill="#c8f0ff" opacity="0.55"/>
+          <!-- Window 1 -->
+          <rect x="38" y="10" width="12" height="13" rx="2" fill="#c8f0ff" opacity="0.7"/>
+          <!-- Window 2 -->
+          <rect x="52" y="10" width="12" height="13" rx="2" fill="#c8f0ff" opacity="0.7"/>
+          <!-- Window 3 -->
+          <rect x="66" y="10" width="12" height="13" rx="2" fill="#c8f0ff" opacity="0.7"/>
+          <!-- Front windshield -->
+          <path d="M80,10 L90,23 L80,23 Z" fill="#c8f0ff" opacity="0.55"/>
+          <!-- Body crease line -->
+          <line x1="6" y1="31" x2="102" y2="31" stroke="rgba(0,0,0,0.18)" stroke-width="1.5"/>
+          <!-- Front bumper -->
+          <rect x="96" y="27" width="10" height="10" rx="3" fill="#aaa"/>
+          <!-- Rear bumper -->
+          <rect x="4" y="27" width="10" height="10" rx="3" fill="#aaa"/>
+          <!-- Headlight -->
+          <rect x="99" y="25" width="7" height="7" rx="2" fill="#fff8c5"/>
+          <!-- Headlight inner -->
+          <rect x="101" y="26.5" width="4" height="4" rx="1" fill="#fffde7"/>
+          <!-- Tail light -->
+          <rect x="4" y="25" width="6" height="7" rx="2" fill="#ff4444"/>
+          <!-- Roof rack detail -->
+          <rect x="32" y="8" width="48" height="2" rx="1" fill="#b00020" opacity="0.6"/>
+          <!-- Door line -->
+          <line x1="54" y1="24" x2="54" y2="44" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+          <!-- Wheel rear -->
+          <g id="wheelR">
+            <circle cx="27" cy="44" r="8.5" fill="#111"/>
+            <circle cx="27" cy="44" r="6.5" fill="#222"/>
+            <circle cx="27" cy="44" r="4" fill="#2e2e2e"/>
+            <line x1="27" y1="37.5" x2="27" y2="50.5" stroke="#555" stroke-width="2"/>
+            <line x1="20.5" y1="44" x2="33.5" y2="44" stroke="#555" stroke-width="2"/>
+            <line x1="22.5" y1="39.5" x2="31.5" y2="48.5" stroke="#555" stroke-width="1.5"/>
+            <line x1="31.5" y1="39.5" x2="22.5" y2="48.5" stroke="#555" stroke-width="1.5"/>
+            <circle cx="27" cy="44" r="1.8" fill="#666"/>
+          </g>
+          <!-- Wheel front -->
+          <g id="wheelF">
+            <circle cx="83" cy="44" r="8.5" fill="#111"/>
+            <circle cx="83" cy="44" r="6.5" fill="#222"/>
+            <circle cx="83" cy="44" r="4" fill="#2e2e2e"/>
+            <line x1="83" y1="37.5" x2="83" y2="50.5" stroke="#555" stroke-width="2"/>
+            <line x1="76.5" y1="44" x2="89.5" y2="44" stroke="#555" stroke-width="2"/>
+            <line x1="78.5" y1="39.5" x2="87.5" y2="48.5" stroke="#555" stroke-width="1.5"/>
+            <line x1="87.5" y1="39.5" x2="78.5" y2="48.5" stroke="#555" stroke-width="1.5"/>
+            <circle cx="83" cy="44" r="1.8" fill="#666"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Lessons -->
+    <div class="lessons-col">
+
+      <!-- ── LESSON 1 ── -->
+      <article class="waystation" data-stop="1" data-accent="#e63946">
+        <div class="ws-marker">
+          <div class="ws-dot"></div>
+          <div class="ws-arm"></div>
+          <div class="ws-label"><span class="ws-num">01</span><span class="ws-tag">Waystation</span></div>
+        </div>
+        <div class="lesson-card reveal">
+          <div class="card-top">
+            <span class="lesson-tag">Life Lesson #1</span>
+            <h2 class="lesson-rule">People's opinions and perspectives on you can change depending on how you interact with them.</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-section">
+              <h3 class="section-head"><span class="sh-icon">◆</span> Analysis</h3>
+              <p>Trevor is explaining how he used his ability to speak multiple languages like Xhosa and Zulu to get past the racial and tribal divides in South Africa. By speaking another person's language, he could change how they saw him and their perception of him. <span class="pull-quote">"I became a chameleon. My color didn't change, but I could change your perception of my color"</span> <span class="cite">(Noah 88)</span>. The chameleon comparison works well because real chameleons change their actual skin. Noah isn't literally saying he changed skin colors, but rather that he changed how other people saw him by changing the way he behaved. When Noah says "your perception of my color," the focus goes to the person looking at him instead of Trevor himself. Noah used language to shift how people decided to see him, and that gave him a way to belong in places he would have otherwise been left out of.</p>
+            </div>
+            <div class="card-section card-personal">
+              <h3 class="section-head"><span class="sh-icon">◈</span> Personal Connection</h3>
+              <p>I relate to this because I switch between two versions of myself all the time. At home, I always speak in Hindi and the way I talk to my parents, the jokes I make, and my poise is totally different from how I am at school. At school I hang out with different people, I laugh at different things and act in a way that makes sense for that environment. It is not like I am pretending in either place because both feel like the real version of me, but it's an interesting observation I have made about myself and my own life. Trevor figured out how to switch between these two personas to his advantage and I think I have done something similar subconsciously. I honestly don't even know which version is the "truer" version of myself anymore, and I treat both as simply being two ends of a sword.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── LESSON 2 ── -->
+      <article class="waystation" data-stop="2" data-accent="#9b5de5">
+        <div class="ws-marker">
+          <div class="ws-dot"></div>
+          <div class="ws-arm"></div>
+          <div class="ws-label"><span class="ws-num">02</span><span class="ws-tag">Waystation</span></div>
+        </div>
+        <div class="lesson-card reveal">
+          <div class="card-top">
+            <span class="lesson-tag">Life Lesson #2</span>
+            <h2 class="lesson-rule">Pain is inevitable but the response one has to pain is what determines if pain will hold them back or allow them to grow.</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-section">
+              <h3 class="section-head"><span class="sh-icon">◆</span> Analysis</h3>
+              <p>Noah's mother Patricia is sharing her philosophy on dealing with hardship. She grew up under apartheid in extreme poverty and faced abuse and control from her own family, but she refused to let that define her or slow her down. She is passing this mindset on to Noah as a way of teaching him how to handle the pain he will face in his own life. <span class="pull-quote">"Learn from your past and be better because of your past... but don't cry about your past. Life is full of pain. Let the pain sharpen you, but don't hold on to it. Don't be bitter"</span> <span class="cite">(Noah 104)</span>. Noah could have used a softer word like "teach" or "help" but instead he includes "sharpen," which implies something rough and uncomfortable. Pain is being compared to a tool that can make you better, but only if you use it and then put it down. The phrase "don't hold on to it" coming right after "let the pain sharpen you" creates a sense of tension because those two ideas seem to contradict each other. It is hard to let something shape you and also let it go at the same time, and that tension is what makes the advice feel real. Noah includes this quote to show where he got his ability to keep moving forward through everything he went through.</p>
+            </div>
+            <div class="card-section card-personal">
+              <h3 class="section-head"><span class="sh-icon">◈</span> Personal Connection</h3>
+              <p class="placeholder"><em>Personal response coming soon.</em></p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── LESSON 3 ── -->
+      <article class="waystation" data-stop="3" data-accent="#00b4d8">
+        <div class="ws-marker">
+          <div class="ws-dot"></div>
+          <div class="ws-arm"></div>
+          <div class="ws-label"><span class="ws-num">03</span><span class="ws-tag">Waystation</span></div>
+        </div>
+        <div class="lesson-card reveal">
+          <div class="card-top">
+            <span class="lesson-tag">Life Lesson #3</span>
+            <h2 class="lesson-rule">Loving something does not give you ownership over it and expecting it to belong only to you will only lead to disappointment.</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-section">
+              <h3 class="section-head"><span class="sh-icon">◆</span> Analysis</h3>
+              <p>Noah is reflecting on his "first heartbreak" after finding out his dog Fufi had a "double life" with another family. He thought Fufi belonged only to him but eventually realized that her independent spirit and what he saw as "cheating" was really just her living her life to the fullest. Noah calls himself "lucky" for going through something that clearly hurt him, showing the irony in this scenario. Most people would not describe heartbreak as lucky, especially when they experienced it as a kid. However, by framing it this way, Noah is looking back on the experience with a maturity that he did not have at the time. The phrase "the thing that you love" is also worth noting because he does not say "the person" or "the dog," he keeps it broad on purpose. That makes the lesson feel like it applies to everything in life, not just Fufi.</p>
+            </div>
+            <div class="card-section card-personal">
+              <h3 class="section-head"><span class="sh-icon">◈</span> Personal Connection</h3>
+              <p>When I moved to the U.S. from India in 6th grade, I didn't know anyone, and Shaurya was the first real friend I made because he had also just moved here. We got really close really fast. We would have sleepovers all the time and it felt like we were going to go through school together. But then he moved to Virginia the summer after 6th grade, and that was kind of it. We never really talked or saw each other after that. 7th grade was a weird experience for me because I was back to having no one again, and I had to go through that whole process of making friends from scratch a second time. I did eventually make new friends but it took a while, and for the first few months I was a little lonely. Looking back, I think that experience taught me something close to what Noah is saying. Shaurya was not "mine" to keep, he had his own life and his family had to go where they had to go. While I was disappointed at the time, I was thankfully mature enough to also understand this.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── LESSON 4 ── -->
+      <article class="waystation" data-stop="4" data-accent="#f4a261">
+        <div class="ws-marker">
+          <div class="ws-dot"></div>
+          <div class="ws-arm"></div>
+          <div class="ws-label"><span class="ws-num">04</span><span class="ws-tag">Waystation</span></div>
+        </div>
+        <div class="lesson-card reveal">
+          <div class="card-top">
+            <span class="lesson-tag">Life Lesson #4</span>
+            <h2 class="lesson-rule">Fitting in on the surface does not mean you actually belong somewhere.</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-section">
+              <h3 class="section-head"><span class="sh-icon">◆</span> Analysis</h3>
+              <p>Noah describes his time living in Eden Park, a "colored" neighborhood where he expected to fit in because of his complexion. But because he did not share the specific language (Afrikaans) or cultural background of the community, he ended up feeling more isolated and left out than he ever did in neighborhoods where he obviously did not belong. <span class="pull-quote">"It taught me that it is easier to be an insider as an outsider than to be an outsider as an insider"</span> <span class="cite">(Noah 174)</span>. Noah structures this quote almost like a riddle, requiring the reader to read it multiple times to truly understand the meaning. When one is clearly an outsider, people are curious and give them room to exist. But when that person looks like they should belong and then doesn't, people treat them like something is wrong with them. Noah flips what the reader would expect, because most people assume that looking the part is enough to fit in. His experience in Eden Park shows that belonging is about way more than just the appearance of a person.</p>
+            </div>
+            <div class="card-section card-personal">
+              <h3 class="section-head"><span class="sh-icon">◈</span> Personal Connection</h3>
+              <p>When I first moved to the U.S. in 6th grade, some of my friends would point out my accent and the way I said certain words. It was not mean most of the time, but it made me aware that I sounded different from everyone else. Now, when I go back to India, however, my family also comment on how I talk and say I sound American. It is like I don't fully fit in either place. That is basically what Noah is describing with Eden Park. He looked like he should belong there but once people actually interacted with him they treated him like an outsider. I have that same experience where on the surface I should fit in with both groups, Indian kids and American kids, but there is always something slightly off that people pick up on. I don't think I'm upset about it anymore, but it is an interesting thing to sit with, knowing that neither side fully claims you.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── LESSON 5 ── -->
+      <article class="waystation" data-stop="5" data-accent="#2d6a4f">
+        <div class="ws-marker">
+          <div class="ws-dot"></div>
+          <div class="ws-arm"></div>
+          <div class="ws-label"><span class="ws-num">05</span><span class="ws-tag">Waystation</span></div>
+        </div>
+        <div class="lesson-card reveal">
+          <div class="card-top">
+            <span class="lesson-tag">Life Lesson #5</span>
+            <h2 class="lesson-rule">Discipline that comes from love looks completely different from discipline that comes from a system that does not care about a person.</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-section">
+              <h3 class="section-head"><span class="sh-icon">◆</span> Analysis</h3>
+              <p>After Noah is released from jail for driving a car with unregistered plates, his mother explains why she is disciplining him so strictly. She argues that her punishment was necessary to protect Noah from the violence of the South African legal system, which does not value the lives of colored people. In her mind, beating Noah herself was going to cause less harm compared to what the police or the state would do to him. <span class="pull-quote">"If I don't punish you, the world will punish you even worse. The world doesn't love you. If the police get you, the police don't love you. When I beat you, I'm trying to save you. When they beat you, they're trying to kill you"</span> <span class="cite">(Noah 358–359)</span>. Noah structures his mother's response as a direct rebuttal, which strengthens her logical appeal. Additionally, Noah stating "You're right. He didn't. But He blessed me with the son who did" creates a contrast between what God did not do literally and what God arranged to happen indirectly. The first two sentences concede Noah's point entirely, but the third flips the whole argument back in her favor. The word "blessed" is also worth noting because she does not say "gave" or "provided." She says "blessed," which is a deliberate word choice that frames Noah's success as something granted rather than earned. By including this as the final quote of the book, Noah gives the reader a clear picture of who his mother is at her core. Everything she went through did not change her. It confirmed what she already believed.</p>
+            </div>
+            <div class="card-section card-personal">
+              <h3 class="section-head"><span class="sh-icon">◈</span> Personal Connection</h3>
+              <p class="placeholder"><em>Personal response coming soon.</em></p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── LESSON 6 ── -->
+      <article class="waystation" data-stop="6" data-accent="#457b9d">
+        <div class="ws-marker">
+          <div class="ws-dot"></div>
+          <div class="ws-arm"></div>
+          <div class="ws-label"><span class="ws-num">06</span><span class="ws-tag">Waystation</span></div>
+        </div>
+        <div class="lesson-card reveal">
+          <div class="card-top">
+            <span class="lesson-tag">Life Lesson #6</span>
+            <h2 class="lesson-rule">In the case of some people, faith and logic are so intertwined that one cannot exist without the other.</h2>
+          </div>
+          <div class="card-body">
+            <div class="card-section">
+              <h3 class="section-head"><span class="sh-icon">◆</span> Analysis</h3>
+              <p>At the end of the book, Noah's mother has survived being shot in the head by her husband Abel. Noah teases her about her lack of health insurance, pointing out that "Jesus" did not pay the 50,000 rand hospital bill that Noah himself just covered. This is her response, crediting God for providing her with a son who had the means to save her. <span class="pull-quote">"You're right. He didn't. But He blessed me with the son who did"</span> <span class="cite">(Noah 667)</span>. Noah's mother responds to his joke by first agreeing with him, then redirecting the credit back to God. She admits that Jesus did not literally pay the bill, but argues that God blessed her with a son who could. The word "blessed" stands out because it frames Noah's ability to help her as something given to her by God rather than something that Noah earned on his own. Noah includes this as the final quote of the book to show that after everything his mother went through, her faith never changed and she was still a strong believer.</p>
+            </div>
+            <div class="card-section card-personal">
+              <h3 class="section-head"><span class="sh-icon">◈</span> Personal Connection</h3>
+              <p>This quote reminded me of a specific moment during Project Refill last year, which was an initiative me and my friend founded to combat food insecurity. We had a goal of raising $1,500 in monetary donations and $2,500 in food donations in the span of 3 months, among a few other metrics. We had been running a donation drive for weeks and were sitting ~$70 short of our monetary goal with 2 days left before our DECA 20-pager was due. At that point I had already mentally accepted that we were going to fall short and was trying to figure out how to frame it in the report. Then someone I did not know personally donated $100, which put us over the goal with almost no time to spare. I remember showing my co-founder Raj and neither of us really said anything for a second. Logically, I know that donation had a completely reasonable explanation. Someone saw our campaign, decided it was worth supporting, and clicked a button. But in that moment it did not feel like that. It felt like something had decided we were supposed to make it. I am not a particularly religious person, so I did not frame it the way Noah's mother would have. But I understood for the first time why someone might. When the timing is that specific and the margin is that small, logic starts to feel incomplete.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- end lessons-col -->
+  </div><!-- end road-wrapper -->
+
+  <!-- ═══ DRIVEWAY ═════════════════════════════════════════════ -->
+  <section class="driveway" id="driveway">
+    <div class="driveway-road-cap"></div>
+
+    <div class="driveway-inner reveal">
+      <div class="driv-icon">
+        <svg viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg" width="180">
+          <!-- Glow -->
+          <ellipse cx="80" cy="130" rx="60" ry="10" fill="rgba(230,57,70,0.15)"/>
+          <!-- Roof -->
+          <polygon points="15,70 80,10 145,70" fill="#e63946"/>
+          <!-- Roof highlight -->
+          <polygon points="15,70 80,10 47,10" fill="#ef4a58" opacity="0.3"/>
+          <!-- Wall -->
+          <rect x="28" y="70" width="104" height="60" rx="2" fill="#f1f1f1"/>
+          <!-- Wall shadow -->
+          <rect x="28" y="70" width="104" height="60" rx="2" fill="url(#wallGrad)"/>
+          <!-- Door -->
+          <rect x="62" y="90" width="36" height="40" rx="3" fill="#457b9d"/>
+          <!-- Door panel -->
+          <rect x="66" y="95" width="28" height="16" rx="2" fill="rgba(255,255,255,0.1)"/>
+          <rect x="66" y="114" width="28" height="12" rx="2" fill="rgba(255,255,255,0.1)"/>
+          <!-- Door knob -->
+          <circle cx="86" cy="110" r="2" fill="#ffd166"/>
+          <!-- Window L -->
+          <rect x="36" y="80" width="22" height="20" rx="3" fill="#a8d8ea" opacity="0.85"/>
+          <line x1="47" y1="80" x2="47" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+          <line x1="36" y1="90" x2="58" y2="90" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+          <!-- Window R -->
+          <rect x="102" y="80" width="22" height="20" rx="3" fill="#a8d8ea" opacity="0.85"/>
+          <line x1="113" y1="80" x2="113" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+          <line x1="102" y1="90" x2="124" y2="90" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+          <!-- Driveway -->
+          <rect x="60" y="130" width="40" height="10" rx="1" fill="#888"/>
+          <!-- Driveway lines -->
+          <line x1="68" y1="130" x2="68" y2="140" stroke="#aaa" stroke-width="1"/>
+          <line x1="80" y1="130" x2="80" y2="140" stroke="#aaa" stroke-width="1"/>
+          <line x1="92" y1="130" x2="92" y2="140" stroke="#aaa" stroke-width="1"/>
+          <!-- Chimney -->
+          <rect x="108" y="30" width="12" height="22" rx="1" fill="#c1121f"/>
+          <!-- Chimney smoke -->
+          <circle cx="114" cy="26" r="5" fill="rgba(200,200,200,0.2)"/>
+          <circle cx="117" cy="20" r="4" fill="rgba(200,200,200,0.15)"/>
+          <defs>
+            <linearGradient id="wallGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(0,0,0,0.08)"/>
+              <stop offset="60%" stop-color="rgba(0,0,0,0)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,0.05)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="driv-badge">Final Destination</div>
+      <h2 class="driv-title">My Driveway</h2>
+      <div class="driv-divider"></div>
+      <p class="driv-text">The symbol I chose for my driveway is a house — specifically, the idea of home as a place I have built for myself rather than one I was handed. Growing up between two countries and two cultures, I spent a lot of time feeling like I did not fully belong anywhere. The lessons from Trevor Noah's journey have shown me that home is not a fixed address, but a set of values, languages, and people you carry with you. My hopes for the future are to build something real — not just a career or a degree, but a version of myself that is settled and sure. I want to look back someday and see a clear line connecting where I started to where I ended up, the same way a driveway connects the road to the place you belong. That is the destination I am driving toward.</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>Angad Kochar &nbsp;·&nbsp; Life Roadmap &nbsp;·&nbsp; <em>Born a Crime</em> by Trevor Noah &nbsp;·&nbsp; ENG4U</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
