@@ -696,6 +696,12 @@ body {
   border-radius: 1px;
 }
 
+.driv-placeholder {
+  color: rgba(255,255,255,0.25) !important;
+  font-style: italic;
+  border-style: dashed !important;
+}
+
 .driv-text {
   font-family: 'Inter', sans-serif;
   font-size: 1.05rem;
