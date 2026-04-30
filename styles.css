@@ -295,7 +295,9 @@ body {
 
 .dash-anim {
   width: 6px;
-  height: 300%;
+  /* Extra height top + bottom so no gap when translateY shifts it */
+  height: calc(100% + 100px);
+  margin-top: -50px;
   background: repeating-linear-gradient(
     to bottom,
     var(--yellow) 0px,
@@ -303,12 +305,14 @@ body {
     transparent 26px,
     transparent 50px
   );
-  animation: dash-scroll 0.9s linear infinite;
+  /* Translate exactly one pattern period (50px) for a seamless loop */
+  animation: dash-scroll 1.1s linear infinite;
+  will-change: transform;
 }
 
 @keyframes dash-scroll {
   from { transform: translateY(0); }
-  to   { transform: translateY(76px); }
+  to   { transform: translateY(-50px); }
 }
 
 /* ── Sticky car ── */
