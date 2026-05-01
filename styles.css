@@ -38,7 +38,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(175deg, #06061a 0%, #0e0e2e 35%, #180d30 65%, #0e0e22 100%);
+  background: transparent;
   scroll-snap-align: start;
 }
 
@@ -142,9 +142,17 @@ body {
 /* ── Hero content ── */
 .hero-content {
   position: relative;
-  z-index: 10;
+  z-index: 40;
   text-align: center;
-  padding: 2rem 2rem 14rem;
+  padding: 4rem 4rem;
+  margin: 0 1.5rem;
+  max-width: 600px;
+  background: rgba(8, 8, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
 .hero-eyebrow {
@@ -220,7 +228,9 @@ body {
 
 .road-strip {
   position: fixed;
-  left: 0; top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0; bottom: 0;
   width: var(--road-w);
   display: flex;
   z-index: 5;
@@ -264,7 +274,7 @@ body {
 /* ── Car (fixed to road left rail) ── */
 .car-sticky {
   position: fixed;
-  left: calc(var(--road-w) / 2);
+  left: 50%;
   top: 50vh;
   transform: translateX(-50%) translateY(-50%);
   width: var(--road-w);
@@ -298,9 +308,13 @@ body {
    STOP CARD GRID
 ═══════════════════════════════════════════════════════════ */
 .stop-grid {
-  margin-left: var(--road-w);
   display: flex;
   flex-direction: column;
+  padding: 8rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 /* ── Individual card ── */
@@ -308,16 +322,31 @@ body {
   display: flex;
   flex-direction: column;
   background: #0f0f1e;
-  border-radius: 0;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   border: none;
   text-align: left;
   padding: 0;
+  margin: 3rem 0;
+  width: calc(50% - (var(--road-w) / 2) - 2rem);
   border-left: 5px solid var(--stop-accent, #e63946);
-  height: 100vh;
-  scroll-snap-align: start;
-  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  height: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.stop-card:nth-child(odd) {
+  align-self: flex-start;
+  margin-left: 1rem;
+}
+
+.stop-card:nth-child(even) {
+  align-self: flex-end;
+  margin-right: 1rem;
+  border-left: none;
+  border-right: 5px solid var(--stop-accent, #e63946);
 }
 
 .stop-card:hover {
@@ -341,25 +370,27 @@ body {
 /* image area */
 .sc-img-wrap {
   position: relative;
-  flex: 1;
-  min-height: 0;
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  background: #1a1a2e;
+  background: #111122;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sc-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
+.sc-img-svg {
+  width: 70px;
+  height: 70px;
+  fill: none;
+  stroke: var(--stop-accent, #fff);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.stop-card:hover .sc-img { transform: scale(1.06); }
-
-.sc-img-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 35%, rgba(8,8,21,0.72));
-}
+.stop-card:hover .sc-img-svg { transform: scale(1.15); }
 
 /* card footer */
 .sc-foot {
@@ -395,6 +426,18 @@ body {
 /* ── Driveway card (full-height, column layout like the others) ── */
 .stop-card.is-driveway {
   flex-direction: column;
+  align-self: center !important;
+  margin: 6rem 0 !important;
+  width: 90%;
+  max-width: 800px;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: 5px solid var(--stop-accent, #e63946);
+  text-align: center;
+}
+
+.stop-card.is-driveway .sc-foot {
+  align-items: center;
 }
 
 /* ── Reveal animation ── */
@@ -607,6 +650,31 @@ body {
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════════════ */
+@media (max-width: 800px) {
+  .road-strip {
+    left: 0;
+    transform: none;
+  }
+  .car-sticky {
+    left: calc(var(--road-w) / 2);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .stop-grid {
+    margin-left: var(--road-w);
+    max-width: none;
+    padding: 4rem 0;
+    align-items: center;
+  }
+  .stop-card {
+    width: 90% !important;
+    max-width: 500px;
+    align-self: center !important;
+    margin: 3rem 0 !important;
+    border-right: none !important;
+    border-left: 5px solid var(--stop-accent, #e63946) !important;
+  }
+}
+
 @media (max-width: 640px) {
   :root { --road-w: 52px; }
 

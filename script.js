@@ -8,7 +8,6 @@ const pStars      = document.getElementById('pStars');
 const pMoon       = document.getElementById('pMoon');
 const pMountains  = document.getElementById('pMountains');
 const pCity       = document.getElementById('pCity');
-const pRoad       = document.getElementById('pRoad');
 const heroContent = document.querySelector('.hero-content');
 const car         = document.getElementById('car');
 const wheelF      = document.getElementById('wheelF');
@@ -35,7 +34,6 @@ function updateParallax() {
   pMoon.style.transform      = `translateY(${scrollY * 0.18}px)`;
   pMountains.style.transform = `translateY(${scrollY * 0.38}px)`;
   pCity.style.transform      = `translateY(${scrollY * 0.55}px)`;
-  pRoad.style.transform      = `translateY(${scrollY * 0.75}px)`;
 
   if (heroContent) {
     const fade = clamp(1 - scrollY / (heroH * 0.6), 0, 1);
