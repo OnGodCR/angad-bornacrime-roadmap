@@ -87,3 +87,39 @@ function tick() {
 }
 
 requestAnimationFrame(tick);
+
+/* ─── modal ──────────────────────────────────────────────── */
+const modalOverlay = document.getElementById('modalOverlay');
+const modalPanel   = document.getElementById('modalPanel');
+const modalClose   = document.getElementById('modalClose');
+const modalBody    = document.getElementById('modalBody');
+
+function openModal(targetId) {
+  const source = document.getElementById(targetId);
+  if (!source) return;
+
+  /* Clone the stored content into the modal body */
+  modalBody.innerHTML = source.innerHTML;
+  modalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  modalPanel.scrollTop = 0;
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* Card clicks */
+document.querySelectorAll('.stop-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card.dataset.target));
+});
+
+/* Close triggers: button, overlay backdrop, Escape key */
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', e => {
+  if (e.target === modalOverlay) closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
